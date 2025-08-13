@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 51, 51, 51;
+  --background-start-rgb: 250, 250, 250;
+  --background-end-rgb: 255, 255, 255;
+  --primary: 180, 83, 9;
+  --primary-light: 221, 126, 53;
+  --secondary: 94, 120, 127;
+  --accent: 227, 183, 113;
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 30, 30, 30;
+  --background-end-rgb: 10, 10, 10;
+  --primary: 221, 126, 53;
+  --primary-light: 227, 183, 113;
+  --secondary: 94, 120, 127;
+  --accent: 180, 83, 9;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold mb-4 text-primary;
+  }
+  h2 {
+    @apply text-3xl font-semibold mb-3 text-primary;
+  }
+  h3 {
+    @apply text-2xl font-medium mb-2 text-primary;
+  }
+  p {
+    @apply mb-4;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-primary text-white rounded-md shadow-md hover:bg-primary-light transition-all duration-300 inline-block;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-secondary text-white rounded-md shadow-md hover:opacity-90 transition-all duration-300 inline-block;
+  }
+  
+  .container-section {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300;
+  }
+  
+  .text-primary {
+    @apply text-[rgb(var(--primary))];
+  }
+  
+  .text-secondary {
+    @apply text-[rgb(var(--secondary))];
+  }
+  
+  .text-accent {
+    @apply text-[rgb(var(--accent))];
+  }
+  
+  .bg-primary {
+    @apply bg-[rgb(var(--primary))];
+  }
+  
+  .bg-primary-light {
+    @apply bg-[rgb(var(--primary-light))];
+  }
+  
+  .bg-secondary {
+    @apply bg-[rgb(var(--secondary))];
+  }
+  
+  .bg-accent {
+    @apply bg-[rgb(var(--accent))];
+  }
+}
+
+/* SUPPORT NEXTJS ERROR UI */
+nextjs-portal {
+  display: none;
+}
+
+/* SUPPORT NEXTJS ERROR UI */
+nextjs-portal {
+  display: none;
+}

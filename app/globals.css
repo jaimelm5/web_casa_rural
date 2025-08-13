@@ -32,19 +32,28 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-@layer base {
-  h1 {
-    @apply text-4xl font-bold mb-4 text-primary;
-  }
-  h2 {
-    @apply text-3xl font-semibold mb-3 text-primary;
-  }
-  h3 {
-    @apply text-2xl font-medium mb-2 text-primary;
-  }
-  p {
-    @apply mb-4;
-  }
+@layer base {  
+  h1 {  
+    /* @apply text-4xl; */   
+    @apply font-bold mb-4 text-primary;  
+    font-size: 2.25rem; /* ~ text-4xl */  
+    line-height: 2.5rem;  
+  }  
+  h2 {  
+    /* @apply text-3xl; */  
+    @apply font-semibold mb-3 text-primary;  
+    font-size: 1.875rem; /* ~ text-3xl */  
+    line-height: 2.25rem;  
+  }  
+  h3 {  
+    /* @apply text-2xl; */  
+    @apply font-medium mb-2 text-primary;  
+    font-size: 1.5rem; /* ~ text-2xl */  
+    line-height: 2rem;  
+  }  
+  p {  
+    @apply mb-4;  
+  }  
 }
 
 @layer components {

@@ -1,3 +1,4 @@
+import RoomsClient from '@/components/rooms-client';
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Home as HomeIcon, Users, Utensils, Wifi, Coffee, MapPin } from "lucide-react";
@@ -48,6 +49,8 @@ export default function HomePage() {
       </section>
       
       <FeaturesSection />
+
+      <RoomsClient />
       
       <GalleryPreview />
       
